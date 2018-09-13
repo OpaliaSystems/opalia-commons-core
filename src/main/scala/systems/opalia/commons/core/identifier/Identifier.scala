@@ -1,10 +1,13 @@
 package systems.opalia.commons.core.identifier
 
 import java.util.Objects
+import systems.opalia.commons.core.rendering.*
 
 
 trait Identifier
-  extends IndexedSeq[Byte] {
+  extends IndexedSeq[Byte]
+    with StringRenderable
+    with ByteRenderable {
 
   protected val data: Vector[Byte]
 
@@ -23,4 +26,9 @@ trait Identifier
 
   override final def hashCode: Int =
     Objects.hash(data.map(Byte.box): _*)
+
+  override final def renderBytes(renderer: ByteRenderer): ByteRenderer = {
+
+    renderer ++= data
+  }
 }
