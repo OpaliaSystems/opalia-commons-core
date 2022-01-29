@@ -1,6 +1,7 @@
 package systems.opalia.commons.core.identifier
 
 import java.util.Objects
+import systems.opalia.commons.core.codec.AsciiCodec
 import systems.opalia.commons.core.rendering.*
 
 
@@ -31,4 +32,7 @@ trait Identifier
 
     renderer ++= data
   }
+
+  final def toStringWithCodec(codec: AsciiCodec): String =
+    codec.encode(data)
 }
