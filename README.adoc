@@ -5,6 +5,22 @@ The code was created with the aim of simplifying the development of SOA projects
 
 Download new versions from the Git repository https://github.com/OpaliaSystems/opalia-commons-core.
 
+=== Packages
+
+* codec: conversion for ACSII based codes like Base64, Hex, Radix62, ...
+* concurrent: helper for concurrent bootstrapping and shutdown procedures
+* cursor: a general purpose cursor implementation
+* database: pattern for generic database access
+* identifier: ID implementations (Object-ID, UUID)
+* json: JSON AST for communication between OSGi services
+* logging: logging facade with call-by-name message evaluation
+* mathx: some helper functions for mathematics
+* rendering: pattern for rendering objects to strings or byte sequences
+* scripting: an API for scripting based on ideas of GraalVM
+* string: some improvements for the string class
+* vfs: pattern to implement a virtual file system
+* worker: facade to hide various implementations of distributed computing solutions
+
 === Usage
 
 [source,scala]
