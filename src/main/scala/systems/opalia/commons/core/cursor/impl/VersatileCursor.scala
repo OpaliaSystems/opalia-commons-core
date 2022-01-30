@@ -1,6 +1,6 @@
 package systems.opalia.commons.core.cursor.impl
 
-import java.io.Closeable
+import java.io.{Closeable, InputStream}
 import java.util.NoSuchElementException
 import systems.opalia.commons.core.cursor.*
 
@@ -143,6 +143,30 @@ object VersatileCursor {
 
       override def get: T =
         source.get
+
+      override def close(): Unit =
+        source.close()
+    }
+
+  def fromInputStream(source: InputStream): VersatileCursor[Byte] =
+    new VersatileCursor[Byte]() {
+
+      private var current = -1
+
+      override def next(): Boolean = {
+
+        current = source.read()
+
+        current >= 0
+      }
+
+      override def get: Byte = {
+
+        if (current < 0)
+          throw new IllegalStateException("Either the cursor is not yet initialized or there are no elements left.")
+
+        current.toByte
+      }
 
       override def close(): Unit =
         source.close()
