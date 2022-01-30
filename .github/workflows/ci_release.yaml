@@ -38,4 +38,4 @@ jobs:
           cp ./.github/workflows/global.sbt ~/.sbt/1.0/
           cp ./.github/workflows/plugins.sbt ~/.sbt/1.0/plugins/
       - name: Publish
-        run: echo "ignore"
+        run: sbt publish

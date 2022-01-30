@@ -12,3 +12,47 @@ sonarProperties ++= Map(
 )
 
 Test / jacocoReportSettings := JacocoReportSettings().withFormats(JacocoReportFormats.XML)
+
+Test / publishArtifact := false
+
+publishMavenStyle := true
+
+publishTo := {
+  if (isSnapshot.value)
+    Some("snapshots" at "https://s01.oss.sonatype.org/content/repositories/snapshots")
+  else
+    Some("releases" at "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+}
+
+credentials ++= (
+  if (sys.env.contains("OSSRH_USERNAME") && sys.env.contains("OSSRH_PASSWORD"))
+    Seq(Credentials(
+      "Sonatype Nexus Repository Manager",
+      "s01.oss.sonatype.org",
+      sys.env("OSSRH_USERNAME"),
+      sys.env("OSSRH_PASSWORD")
+    ))
+  else
+    Seq.empty
+  )
+
+credentials ++= (
+  if (sys.env.contains("GPG_KEY_NAME"))
+    Seq(Credentials(
+      "GnuPG Key ID",
+      "gpg",
+      sys.env("GPG_KEY_NAME"),
+      "ignored"
+    ))
+  else
+    Seq.empty
+  )
+
+gpgOptions ++= Seq("--batch", "--pinentry-mode", "loopback")
+
+gpgOptions ++= (
+  if (sys.env.contains("GPG_PASSPHRASE"))
+    Seq("--passphrase", sys.env("GPG_PASSPHRASE"))
+  else
+    Seq.empty
+  )
