@@ -12,7 +12,7 @@ Download new versions from the Git repository https://github.com/OpaliaSystems/o
 * cursor: a general purpose cursor implementation
 * database: pattern for generic database access
 * identifier: ID implementations (Object-ID, UUID)
-* json: JSON AST for communication between OSGi services
+* json: helpers for working with JSON
 * logging: logging facade with call-by-name message evaluation
 * mathx: some helper functions for mathematics
 * rendering: pattern for rendering objects to strings or byte sequences
