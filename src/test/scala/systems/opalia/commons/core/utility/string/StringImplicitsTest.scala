@@ -1,11 +1,11 @@
-package systems.opalia.commons.core.string
+package systems.opalia.commons.core.utility.string
 
 import org.scalatest.flatspec.*
 import org.scalatest.matchers.should.*
-import systems.opalia.commons.core.string.*
+import systems.opalia.commons.core.utility.string.Implicits._
 
 
-class StringImprovementTest
+class StringImplicitsTest
   extends AnyFlatSpec
     with Matchers {
 

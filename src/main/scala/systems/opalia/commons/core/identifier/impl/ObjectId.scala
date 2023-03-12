@@ -8,7 +8,7 @@ import scala.jdk.CollectionConverters.*
 import scala.util.Random
 import systems.opalia.commons.core.codec.impl.Alphabet
 import systems.opalia.commons.core.identifier.*
-import systems.opalia.commons.core.rendering.*
+import systems.opalia.commons.core.utility.rendering.*
 
 
 final class ObjectId private(protected val data: Vector[Byte])

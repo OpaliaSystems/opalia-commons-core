@@ -1,4 +1,4 @@
-package systems.opalia.commons.core.json
+package systems.opalia.commons.core.utility.json
 
 import scala.collection.IndexedSeq
 import scala.collection.immutable.ListMap

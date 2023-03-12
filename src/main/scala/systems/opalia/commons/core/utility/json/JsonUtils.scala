@@ -1,4 +1,4 @@
-package systems.opalia.commons.core.json
+package systems.opalia.commons.core.utility.json
 
 
 object JsonUtils {

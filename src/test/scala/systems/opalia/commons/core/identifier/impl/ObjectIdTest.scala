@@ -3,7 +3,7 @@ package systems.opalia.commons.core.identifier.impl
 import java.nio.ByteBuffer
 import org.scalatest.flatspec.*
 import org.scalatest.matchers.should.*
-import systems.opalia.commons.core.rendering.Renderer
+import systems.opalia.commons.core.utility.rendering.Renderer
 
 
 class ObjectIdTest

@@ -5,7 +5,7 @@ import java.util.Base64 as Base64Handler
 import scala.collection.immutable.ArraySeq
 import scala.util.Try
 import systems.opalia.commons.core.codec.AsciiCodec
-import systems.opalia.commons.core.rendering.Renderer
+import systems.opalia.commons.core.utility.rendering.Renderer
 
 
 object Base64

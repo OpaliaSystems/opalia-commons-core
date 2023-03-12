@@ -1,4 +1,4 @@
-package systems.opalia.commons.core.rendering
+package systems.opalia.commons.core.utility.rendering
 
 import java.nio.charset.Charset
 import java.nio.{ByteBuffer, ByteOrder}

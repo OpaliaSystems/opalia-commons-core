@@ -5,8 +5,8 @@ import scala.collection.immutable.ArraySeq
 import scala.collection.mutable
 import scala.util.Try
 import systems.opalia.commons.core.codec.AsciiCodec
-import systems.opalia.commons.core.mathx
-import systems.opalia.commons.core.rendering.*
+import systems.opalia.commons.core.utility.mathx
+import systems.opalia.commons.core.utility.rendering.*
 
 
 object Alphabet {

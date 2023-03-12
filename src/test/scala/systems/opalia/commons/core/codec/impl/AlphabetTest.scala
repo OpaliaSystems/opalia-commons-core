@@ -5,7 +5,7 @@ import org.scalatest.matchers.should.*
 import scala.collection.mutable
 import scala.util.Random
 import systems.opalia.commons.core.identifier.impl.UniversallyUniqueId
-import systems.opalia.commons.core.mathx
+import systems.opalia.commons.core.utility.mathx
 
 
 class AlphabetTest

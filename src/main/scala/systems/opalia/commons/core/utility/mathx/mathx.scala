@@ -1,4 +1,4 @@
-package systems.opalia.commons.core.mathx
+package systems.opalia.commons.core.utility.mathx
 
 
 def log(base: Double, value: Double): Double =

@@ -6,7 +6,7 @@ import scala.collection.immutable.ArraySeq
 import scala.util.Try
 import systems.opalia.commons.core.codec.impl.Hex
 import systems.opalia.commons.core.identifier.*
-import systems.opalia.commons.core.rendering.*
+import systems.opalia.commons.core.utility.rendering.*
 
 
 final class UniversallyUniqueId private(protected val data: Vector[Byte])

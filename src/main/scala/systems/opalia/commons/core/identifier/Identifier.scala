@@ -2,7 +2,7 @@ package systems.opalia.commons.core.identifier
 
 import java.util.Objects
 import systems.opalia.commons.core.codec.AsciiCodec
-import systems.opalia.commons.core.rendering.*
+import systems.opalia.commons.core.utility.rendering.*
 
 
 trait Identifier

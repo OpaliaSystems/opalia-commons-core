@@ -1,6 +1,6 @@
 package systems.opalia.commons.core.scripting
 
-import systems.opalia.commons.core.json.JsonAst
+import systems.opalia.commons.core.utility.json.JsonAst
 
 
 trait ScriptContext {

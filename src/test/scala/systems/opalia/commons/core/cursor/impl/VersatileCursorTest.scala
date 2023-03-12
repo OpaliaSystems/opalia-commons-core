@@ -4,7 +4,7 @@ import java.io.ByteArrayInputStream
 import org.scalatest.flatspec.*
 import org.scalatest.matchers.should.*
 import scala.util.Random
-import systems.opalia.commons.core.rendering.Renderer
+import systems.opalia.commons.core.utility.rendering.Renderer
 
 
 class VersatileCursorTest
