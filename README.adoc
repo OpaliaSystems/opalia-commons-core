@@ -18,6 +18,7 @@ Download new versions from the Git repository https://github.com/OpaliaSystems/o
 * worker: facade to hide various implementations of distributed computing solutions
 * utility/io: methods for recursive file operations and for working with zip archives
 * utility/json: helpers for working with JSON
+* utility/lang: solutions to handle problems not covered by the standard library
 * utility/mathx: some helper functions for mathematics
 * utility/rendering: pattern for rendering objects to strings or byte sequences
 * utility/string: some improvements for the string class
