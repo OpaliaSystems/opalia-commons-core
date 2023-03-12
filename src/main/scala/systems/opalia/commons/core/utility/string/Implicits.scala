@@ -22,16 +22,28 @@ object Implicits {
       catching(classOf[NumberFormatException]) opt toBigDecimal
 
     def toByte(radix: Int): Byte =
-      mathx.parseUnsignedLong(string, radix, java.lang.Byte.BYTES).toByte
+      if (string.startsWith("-"))
+        (-mathx.parseUnsignedLong(string.drop(1), radix, java.lang.Byte.BYTES)).toByte
+      else
+        mathx.parseUnsignedLong(string, radix, java.lang.Byte.BYTES).toByte
 
     def toShort(radix: Int): Short =
-      mathx.parseUnsignedLong(string, radix, java.lang.Short.BYTES).toShort
+      if (string.startsWith("-"))
+        (-mathx.parseUnsignedLong(string.drop(1), radix, java.lang.Short.BYTES)).toShort
+      else
+        mathx.parseUnsignedLong(string, radix, java.lang.Short.BYTES).toShort
 
     def toInt(radix: Int): Int =
-      mathx.parseUnsignedLong(string, radix, java.lang.Integer.BYTES).toInt
+      if (string.startsWith("-"))
+        (-mathx.parseUnsignedLong(string.drop(1), radix, java.lang.Integer.BYTES)).toInt
+      else
+        mathx.parseUnsignedLong(string, radix, java.lang.Integer.BYTES).toInt
 
     def toLong(radix: Int): Long =
-      mathx.parseUnsignedLong(string, radix, java.lang.Long.BYTES)
+      if (string.startsWith("-"))
+        -mathx.parseUnsignedLong(string.drop(1), radix, java.lang.Long.BYTES)
+      else
+        mathx.parseUnsignedLong(string, radix, java.lang.Long.BYTES)
 
     def toByteOption(radix: Int): Option[Byte] =
       catching(classOf[NumberFormatException]) opt toByte(radix)

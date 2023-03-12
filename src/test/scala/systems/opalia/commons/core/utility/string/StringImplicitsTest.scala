@@ -2,7 +2,7 @@ package systems.opalia.commons.core.utility.string
 
 import org.scalatest.flatspec.*
 import org.scalatest.matchers.should.*
-import systems.opalia.commons.core.utility.string.Implicits._
+import systems.opalia.commons.core.utility.string.Implicits.*
 
 
 class StringImplicitsTest
@@ -40,8 +40,7 @@ class StringImplicitsTest
     "FG".toByteOption(radix = 16) shouldBe None
     the[NumberFormatException] thrownBy "FG".toByte(radix = 16)
 
-    "-5".toByteOption(radix = 16) shouldBe None
-    the[NumberFormatException] thrownBy "-5".toByte(radix = 16)
+    "-5".toByteOption(radix = 16) shouldBe Some((-5).toByte)
 
     "555".toByteOption(radix = 16) shouldBe None
     the[NumberFormatException] thrownBy "555".toByte(radix = 16)
