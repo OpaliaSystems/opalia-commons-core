@@ -1,6 +1,6 @@
 package systems.opalia.commons.core.scripting
 
-import systems.opalia.commons.core.utility.json.JsonAst
+import systems.opalia.commons.core.utility.json.Json
 
 
 trait ScriptContext {
@@ -15,9 +15,9 @@ trait ScriptContext {
 
   def asValue(value: Any): ScriptValue
 
-  def asValue(value: JsonAst.JsonValue): ScriptValue
+  def asValue(value: Json.Node): ScriptValue
 
-  def asJson(value: Any): JsonAst.JsonValue
+  def asJson(value: Any): Json.Node
 
-  def asJson(value: ScriptValue): JsonAst.JsonValue
+  def asJson(value: ScriptValue): Json.Node
 }
