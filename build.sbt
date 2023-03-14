@@ -15,7 +15,7 @@ licenses += "Apache License, Version 2.0" -> url("https://www.apache.org/license
 
 version := "2.1.0"
 
-scalaVersion := "3.1.3"
+scalaVersion := "3.2.2"
 
 scmInfo := Some(
   ScmInfo(
@@ -35,7 +35,7 @@ developers := List(
 )
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.2.11" % Test
+  "org.scalatest" %% "scalatest" % "3.2.15" % Test
 )
 
 scalacOptions ++= Seq(
