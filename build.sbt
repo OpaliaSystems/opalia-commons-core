@@ -13,7 +13,7 @@ homepage := Some(url("https://github.com/OpaliaSystems/opalia-commons-core"))
 
 licenses += "Apache License, Version 2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0.txt")
 
-version := "2.1.0"
+version := "3.0.0"
 
 scalaVersion := "3.2.2"
 
