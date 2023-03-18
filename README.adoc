@@ -1,36 +1,37 @@
-= Commons Core
+= commons-core
 
-This library provides collection of patterns and utilities for Scala to solve common problems.
-The code was created with the aim of simplifying the development of SOA projects.
+This library is a collection of patterns and utilities for Scala to solve common problems.
+It provides some code patterns for developing projects with a service-oriented architecture (SOA) and helps to build a system as a collection of loosely coupled services, what makes it easy to change or replace services without affecting the rest of the system.
 
-Download new versions from the Git repository https://github.com/OpaliaSystems/opalia-commons-core.
+Download new versions from the Git repository: https://github.com/OpaliaSystems/opalia-commons-core
 
-=== Packages
+== Packages
 
-* codec: conversion for ACSII based codes like Base64, Hex, Radix62, ...
+* codec: conversion for ASCII based codes like Base64, Hex, Radix62, ...
 * concurrent: helper for concurrent bootstrapping and shutdown procedures
 * cursor: a general purpose cursor implementation
-* database: pattern for generic database access
-* identifier: ID implementations (Object-ID, UUID)
+* database: a pattern for generic database access
+* identifier: some ID implementations (Object-ID, UUID)
 * logging: logging facade with call-by-name message evaluation
 * scripting: an API for scripting based on ideas of GraalVM
-* vfs: pattern to implement a virtual file system
-* worker: facade to hide various implementations of distributed computing solutions
+* vfs: a pattern for virtual file system
+* worker: a facade to hide various implementations of distributed computing solutions
 * utility/io: methods for recursive file operations and for working with zip archives
 * utility/json: helpers for working with JSON
 * utility/lang: solutions to handle problems not covered by the standard library
 * utility/mathx: some helper functions for mathematics
-* utility/rendering: pattern for rendering objects to strings or byte sequences
+* utility/rendering: a pattern for rendering objects to strings or byte sequences
 * utility/string: some improvements for the string class
+* utility/time: a more relaxed parser and implicit conversions for working with the Java time library
 
-=== Usage
+== Usage
 
 [source,scala]
 ----
 libraryDependencies += "systems.opalia" %% "opalia-commons-core" % "<VERSION>"
 ----
 
-=== License
+== License
 
 Copyright (c) 2022 Eric Löffler (brettaufheber)
 
