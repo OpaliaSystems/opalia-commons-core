@@ -16,7 +16,7 @@ Download new versions from the Git repository: https://github.com/OpaliaSystems/
 * scripting: an API for scripting based on ideas of GraalVM
 * vfs: a pattern for virtual file system
 * worker: a facade to hide various implementations of distributed computing solutions
-* utility/io: methods for recursive file operations and for working with zip archives
+* utility/io: methods for recursive file operations and for working with zip archives; methods for parsing properties
 * utility/json: helpers for working with JSON
 * utility/lang: solutions to handle problems not covered by the standard library
 * utility/mathx: some helper functions for mathematics
