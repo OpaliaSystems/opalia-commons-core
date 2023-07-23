@@ -1,6 +1,6 @@
 package systems.opalia.commons.core.utility.rendering
 
-import java.nio.charset.Charset
+import java.nio.charset.{Charset, StandardCharsets}
 import java.nio.{ByteBuffer, ByteOrder}
 import java.util.Locale
 import scala.collection.mutable
@@ -110,7 +110,7 @@ sealed trait Renderer[R <: Renderer[R, S, U, T], S <: Renderable, U, T]
 
 object Renderer {
 
-  val utf8Charset: Charset = Charset.forName("UTF-8")
+  val utf8Charset: Charset = StandardCharsets.UTF_8
   val appDefaultCharset: Charset = utf8Charset
   val osDefaultCharset: Charset = Charset.defaultCharset()
   val bigEndianByteOrder: ByteOrder = ByteOrder.BIG_ENDIAN

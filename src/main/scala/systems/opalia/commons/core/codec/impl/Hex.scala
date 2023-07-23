@@ -6,7 +6,6 @@ import scala.collection.mutable
 import scala.util.Try
 import systems.opalia.commons.core.codec.AsciiCodec
 import systems.opalia.commons.core.utility.mathx
-import systems.opalia.commons.core.utility.rendering.Renderer
 
 
 object Hex
@@ -16,7 +15,7 @@ object Hex
     data.map("%02x" format _).mkString
 
   def encode(data: String): String =
-    encode(data, Renderer.appDefaultCharset)
+    encode(data, Charset.defaultCharset)
 
   def encode(data: String, charset: Charset): String =
     encode(ArraySeq.unsafeWrapArray(data.getBytes(charset)))
@@ -35,7 +34,7 @@ object Hex
       .toVector
 
   def decodeToString(data: String): String =
-    decodeToString(data, Renderer.appDefaultCharset)
+    decodeToString(data, Charset.defaultCharset)
 
   def decodeToString(data: String, charset: Charset): String =
     new String(decode(data).toArray, charset)

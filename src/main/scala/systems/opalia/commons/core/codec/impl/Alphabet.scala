@@ -45,7 +45,7 @@ object Alphabet {
       }
 
       def encode(data: String): String =
-        encode(data, Renderer.appDefaultCharset)
+        encode(data, Charset.defaultCharset)
 
       def encode(data: String, charset: Charset): String =
         encode(ArraySeq.unsafeWrapArray(data.getBytes(charset)))
@@ -59,7 +59,7 @@ object Alphabet {
       }
 
       def decodeToString(data: String): String =
-        decodeToString(data, Renderer.appDefaultCharset)
+        decodeToString(data, Charset.defaultCharset)
 
       def decodeToString(data: String, charset: Charset): String =
         new String(decode(data).toArray, charset)

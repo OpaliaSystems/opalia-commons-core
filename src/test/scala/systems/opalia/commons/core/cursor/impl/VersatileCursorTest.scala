@@ -1,10 +1,10 @@
 package systems.opalia.commons.core.cursor.impl
 
 import java.io.ByteArrayInputStream
+import java.nio.charset.Charset
 import org.scalatest.flatspec.*
 import org.scalatest.matchers.should.*
 import scala.util.Random
-import systems.opalia.commons.core.utility.rendering.Renderer
 
 
 class VersatileCursorTest
@@ -32,10 +32,10 @@ class VersatileCursorTest
   it should "be able to create a cursor from an input stream" in {
 
     val original = "This is a test."
-    val stream = new ByteArrayInputStream(original.getBytes(Renderer.appDefaultCharset))
+    val stream = new ByteArrayInputStream(original.getBytes(Charset.defaultCharset))
     val cursor = VersatileCursor.fromInputStream(stream)
 
-    new String(cursor.toIndexedSeq.toArray, Renderer.appDefaultCharset) shouldBe original
+    new String(cursor.toIndexedSeq.toArray, Charset.defaultCharset) shouldBe original
   }
 
   it should "be able to create an iterator from a cursor" in {
